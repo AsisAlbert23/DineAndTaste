@@ -1,0 +1,167 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+    <link rel="stylesheet" href="website.css">
+    <title>Dine And Taste's</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+        <img src="logo.png">
+        <h1>Dine And Taste's</h1>
+        </div>
+        <div class="con">
+        <nav>
+            <ul>
+                <li><a onclick="showSection('home')">HOME</a></li>
+                <li><a onclick="showSection('menu')">MENU</a></li>
+                <li><a onclick="showSection('reservations')">RESERVATION</a></li>
+                <li><a onclick="showSection('about')">ABOUT US</a></li>
+            </ul>
+        </nav>
+    </div>
+    </header>
+
+    <section id="home">
+        <br>
+        <h1>"Dine well at Dine and Taste Restaurant, and you'll be able to think well, sleep well, and live well."</h1>
+        
+    </section>
+
+    <section id="menu">
+        <div class="category">
+        <h2>Food Menu</h2>
+        <p>Select Food Category</p>
+        <select onchange="showCategory(this.value)">
+            <option value="sandwich">Sandwiches</option>
+            <option value="veggie">Vegetarian</option>
+            <option value="salad">Salad</option>
+            <option value="brunch">Brunch</option>
+            <option value="burger/fries">Burger with Fries</option>
+            <option value="curry">Curry with Rice</option>
+            <option value="mexican">Mexican</option>
+            <option value="FriedRice">Fried Rice</option>
+            <option value="Fries">Fries</option>
+            <option value="Pasta">Pasta</option>
+            <option value="Meal">Rice Meals</option>
+            <option value="Risotto">Risotto</option>
+            <option value="Snack">Snack</option>
+        </select>
+        
+        <div class="menulist" id="menuList"></div>
+    </div>
+            
+            
+    </section>
+  
+
+    <section id="reservations">
+        <div class="container"></div>
+        <h2>Reservations</h2>
+        <form id="reservationForm">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required>
+            <label for="tableNum">Select Table No.</label>
+            <select id="tableNum" name="tableNum">
+                <option value="table1">Table 1</option>
+                <option value="table2">Table 2</option>
+                <option value="table3">Table 3</option>
+                <option value="table4">Table 4</option>
+                <option value="table5">Table 5</option>
+                <option value="table6">Table 6</option>
+                <option value="table7">Table 7</option>
+                <option value="table8">Table 8</option>
+                <option value="table9">Table 9</option>
+                <option value="table10">Table 10</option>
+            </select>
+    
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required>
+            <label for="time">Time:</label>
+            <input type="time" id="time" name="time" required>
+    
+            <button type="submit" id="submit">Make Reservation</button>
+        </form>
+    </div>
+        <br>
+    </section>
+    
+
+    <section id="about">
+        <div class="intro">
+            <br>
+            <h2>Welcome to Dine And Taste's</h2>
+            <p>&nbsp&nbsp&nbsp Dine and Taste Resto is a dining establishment located at F. Pimentel Ave. Daet, Camarines Norte, was established on March 28, 2019. It is the only restaurant in Daet that offers fusion cuisine. The restaurant was open from 9 a.m. to 9 p.m. and served a variety of cuisine, including tuna quesadilla, yang chow, salisbury steak, beef teriyaki, Bolognese, and many more. The restaurant's vision is to branch out, bringing the unique fusion cuisine to more locations and reaching a wider audience, while their mission is to ensure customer satisfaction, providing a dining experience that not only delights the palate but also creates memorable moments for their customers.</p>
+        </div>
+    </section>
+
+    <br>
+    <br>
+    
+    <footer>
+        <p>&copy; 2023 Dine and Taste's. All rights reserved.</p>
+    </footer>
+
+
+    <!-- server where data will store-->
+    <script type="module">
+
+            document.getElementById("submit").addEventListener('click', function(e) {
+            console.log("Button clicked");
+            set(ref(db, 'user/' + document.getElementById("name").value), {
+            name: document.getElementById("name").value,
+            tableNum: document.getElementById("tableNum").value,
+            date: document.getElementById("date").value,
+            time: document.getElementById("time").value,
+        });
+            console.log("Reservation data sent to Firebase");
+            alert("Successfully added reservation");
+        });
+
+
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-app.js";
+    import { getDatabase, ref, set, get } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-database.js";
+  
+    const firebaseConfig = {
+        apiKey: "AIzaSyA2JthneskDMJTXTnp0JZsL5_540ew2Ovs",
+        authDomain: "dineandtaste-197c9.firebaseapp.com",
+        projectId: "dineandtaste-197c9",
+        storageBucket: "dineandtaste-197c9.appspot.com",
+        messagingSenderId: "1030897267943",
+        appId: "1:1030897267943:web:828750d774b4dc3994de42"
+    };
+  
+    const app = initializeApp(firebaseConfig);
+    const db = getDatabase(app);
+  
+    document.getElementById("submit").addEventListener('click', async function(e) {
+        e.preventDefault();
+
+        const name = document.getElementById("name").value;
+        const tableNum = document.getElementById("tableNum").value;
+        const date = document.getElementById("date").value;
+        const time = document.getElementById("time").value;
+
+        // Check if the selected table is already reserved for the same date and time
+        const reservationsRef = ref(db, `reservations/${tableNum}/${date}/${time}`);
+        const reservationSnapshot = await get(reservationsRef);
+
+        if (reservationSnapshot.exists()) {
+            alert("This table is already reserved for the selected date and time. Please choose another date or time.");
+        } else {
+            // If not reserved, add the new reservation
+            try {
+                await set(reservationsRef, {
+                    name: name,
+                });
+                alert("Successfully added reservation");
+            } catch (error) {
+                alert("Error adding reservation. Please try again.");
+            }
+        }
+    });
+</script>
+<script src="function.js"></script>
+</body>
+</html>

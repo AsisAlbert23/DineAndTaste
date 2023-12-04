@@ -1,0 +1,349 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    width: 100%;
+    margin: auto;
+    background-color: #30D5C8; /* Turquoise background color */
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #f2f2f2;
+}
+
+.Menu {
+    flex-wrap: wrap;
+    justify-content: space-around; /* Better spacing between items */
+    margin-top: 30px;
+}
+.menulist{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 0%;
+}
+
+.list1 {
+    text-align: center;
+    margin: 5px;
+    flex: 0 1 calc(25% - 20px); /* Adjusted for 4 pictures per row */
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 8px;
+    width: fit-content;
+    height: fit-content;
+}
+
+.list1 img {
+    width: 300px; /* Adjusts width to maintain aspect ratio */
+    height: 300px; /* Fixed height for uniformity */
+    border-radius: 4px; /* Rounded corners on images */
+}
+
+.list1 h1{
+    text-align: center;
+    background-color: white;
+}
+.list2 {
+    text-align: center;
+    margin: 5px;
+    flex: 0 1 calc(25% - 20px);
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 8px;
+    width: fit-content;
+    height: fit-content;
+}
+
+.list2 img {
+    width: 300px; /* Adjusts width to maintain aspect ratio */
+    height: 300px; /* Fixed height for uniformity */
+    border-radius: 4px; /* Rounded corners on images */
+}
+
+.list2 h1{
+    text-align: center;
+    background-color: white;
+}
+.list3 {
+    text-align: center;
+    margin: 5px;
+    flex: 0 1 calc(25% - 20px); /* Adjusted for 4 pictures per row */
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 8px;
+    width: fit-content;
+    height: fit-content;
+}
+
+.list3 img {
+    width: 300px; /* Adjusts width to maintain aspect ratio */
+    height: 300px; /* Fixed height for uniformity */
+    border-radius: 4px; /* Rounded corners on images */
+}
+
+.list3 h1{
+    text-align: center;
+    background-color: white;
+}
+.list4 {
+    text-align: center;
+    margin: 5px;
+    flex: 0 1 calc(25% - 20px); /* Adjusted for 4 pictures per row */
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 8px;
+    width: fit-content;
+    height: fit-content;
+}
+
+.list4 img {
+    width: 300px; /* Adjusts width to maintain aspect ratio */
+    height: 300px; /* Fixed height for uniformity */
+    border-radius: 4px; /* Rounded corners on images */
+}
+
+.list4 h1{
+    text-align: center;
+    background-color: white;
+}
+.list5 {
+    text-align: center;
+    margin: 5px;
+    flex: 0 1 calc(25% - 20px); /* Adjusted for 4 pictures per row */
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 8px;
+    width: fit-content;
+    height: fit-content;
+}
+
+.list5 img {
+    width: 300px; /* Adjusts width to maintain aspect ratio */
+    height: 300px; /* Fixed height for uniformity */
+    border-radius: 4px; /* Rounded corners on images */
+}
+
+.list5 h1{
+    text-align: center;
+    background-color: white;
+}
+.list6 {
+    text-align: center;
+    margin: 5px;
+    flex: 0 1 calc(25% - 20px); /* Adjusted for 4 pictures per row */
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 8px;
+    width: fit-content;
+    height: fit-content;
+}
+
+.list6 img {
+    width: 300px; /* Adjusts width to maintain aspect ratio */
+    height: 300px; /* Fixed height for uniformity */
+    border-radius: 4px; /* Rounded corners on images */
+}
+
+.list6 h1{
+    text-align: center;
+    background-color: white;
+}
+.list7 {
+    text-align: center;
+    margin: 5px;
+    flex: 0 1 calc(25% - 20px); /* Adjusted for 4 pictures per row */
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 8px;
+    width: fit-content;
+    height: fit-content;
+}
+
+.list7 img {
+    width: 300px; /* Adjusts width to maintain aspect ratio */
+    height: 300px; /* Fixed height for uniformity */
+    border-radius: 4px; /* Rounded corners on images */
+}
+
+.list7 h1{
+    text-align: center;
+    background-color: white;
+}
+.list8 {
+    text-align: center;
+    margin: 5px;
+    flex: 0 1 calc(25% - 20px); /* Adjusted for 4 pictures per row */
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 8px;
+    width: fit-content;
+    height: fit-content;
+}
+
+.list8 img {
+    width: 300px; /* Adjusts width to maintain aspect ratio */
+    height: 300px; /* Fixed height for uniformity */
+    border-radius: 4px; /* Rounded corners on images */
+}
+
+.list8 h1{
+    text-align: center;
+    background-color: white;
+}
+
+.list9 {
+    text-align: center;
+    margin: 5px;
+    flex: 0 1 calc(25% - 20px); /* Adjusted for 4 pictures per row */
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 8px;
+    width: fit-content;
+    height: fit-content;
+}
+
+.list9 img {
+    width: 300px; /* Adjusts width to maintain aspect ratio */
+    height: 300px; /* Fixed height for uniformity */
+    border-radius: 4px; /* Rounded corners on images */
+}
+
+.list9 h1{
+    text-align: center;
+    background-color: white;
+}
+.list10 {
+    text-align: center;
+    margin: 5px;
+    flex: 0 1 calc(25% - 20px);
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 8px;
+    width: fit-content;
+    height: fit-content;
+}
+
+.list10 img {
+    width: 300px; /* Adjusts width to maintain aspect ratio */
+    height: 300px; /* Fixed height for uniformity */
+    border-radius: 4px; /* Rounded corners on images */
+}
+
+.list10 h1{
+    text-align: center;
+    background-color: white;
+}
+.list11 {
+    text-align: center;
+    margin: 5px;
+    flex: 0 1 calc(25% - 20px); /* Adjusted for 4 pictures per row */
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 8px;
+    width: fit-content;
+    height: fit-content;
+}
+
+.list11 img {
+    width: 300px; /* Adjusts width to maintain aspect ratio */
+    height: 300px; /* Fixed height for uniformity */
+    border-radius: 4px; /* Rounded corners on images */
+}
+
+.list11 h1{
+    text-align: center;
+    background-color: white;
+}
+.list12 {
+    text-align: center;
+    margin: 5px;
+    flex: 0 1 calc(25% - 20px); /* Adjusted for 4 pictures per row */
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 8px;
+    width: fit-content;
+    height: fit-content;
+}
+
+.list12 img {
+    width: 300px; /* Adjusts width to maintain aspect ratio */
+    height: 300px; /* Fixed height for uniformity */
+    border-radius: 4px; /* Rounded corners on images */
+}
+
+.list12 h1{
+    text-align: center;
+    background-color: white;
+}
+.list13 {
+    text-align: center;
+    margin: 5px;
+    flex: 0 1 calc(25% - 20px); /* Adjusted for 4 pictures per row */
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 8px;
+    width: fit-content;
+    height: fit-content;
+}
+
+.list13 img {
+    width: 300px; /* Adjusts width to maintain aspect ratio */
+    height: 300px; /* Fixed height for uniformity */
+    border-radius: 4px; /* Rounded corners on images */
+}
+
+.list13 h1{
+    text-align: center;
+    background-color: white;
+}
+.list14 {
+    text-align: center;
+    margin: 5px;
+    flex: 0 1 calc(25% - 20px); /* Adjusted for 4 pictures per row */
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 8px;
+    width: fit-content;
+    height: fit-content;
+}
+
+.list14 img {
+    width: 300px; /* Adjusts width to maintain aspect ratio */
+    height: 300px; /* Fixed height for uniformity */
+    border-radius: 4px; /* Rounded corners on images */
+}
+
+.list14 h1{
+    text-align: center;
+    background-color: white;
+}
+.list15 {
+    text-align: center;
+    margin: 5px;
+    flex: 0 1 calc(25% - 20px); /* Adjusted for 4 pictures per row */
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 8px;
+    width: fit-content;
+    height: fit-content;
+}
+
+.list15 img {
+    width: 300px; /* Adjusts width to maintain aspect ratio */
+    height: 300px; /* Fixed height for uniformity */
+    border-radius: 4px; /* Rounded corners on images */
+}
+
+.list15 h1{
+    text-align: center;
+    background-color: white;
+}

@@ -1,0 +1,343 @@
+@media screen and (max-width: 800px ) {
+    /* Styles for small screens */
+    body{
+        font-size: 10px; /* Adjust font size for smaller screens */
+        max-height: 800px; /* Maximum height for small screens */
+        min-height: 50px;
+    }
+    body header .con nav ul li a{
+        font-size: 10px;
+        margin-top: -20%;
+    }
+    body header{
+        margin-bottom: 10%;
+        height: 150px;
+        background-color: #333333;
+        position: 0;
+    }
+    body header .logo h1{
+        height: 70px;
+        width: auto;
+        font-size: 30px;
+        margin-bottom: -5%;
+        margin-top: -5%;
+    }
+    body header .logo img{
+        height: 70px;
+        width: auto;
+        font-size: 30px;
+        margin-bottom: -5%;
+    }
+    
+    #home{
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-image: url(background.jpg);
+        width: 100%;
+        height: 100%;
+        background-position-y: center;
+        margin-top: -30%;
+    }
+    #home h1{
+        font-size: 25px;
+        width: 80%;
+        height: fit-content;
+        text-align: center;
+        margin-left: 10%;
+        margin-right: 10%;
+        color: #48E5C2;
+        -webkit-text-stroke: 1.5px #333333; /* Stroke color and width for WebKit browsers (Safari, Chrome) */
+    }
+    #about .intro h2{
+        font-size: 20px;
+        margin-bottom: 20%;
+        text-align: left;
+        margin-top: -30%;
+    }
+    #about .intro{
+        background-color: #48E5C2;
+        margin-top: -30%;
+    }
+    #about .intro p{
+        font-size: 20px;
+        margin-top: -10%;
+    }
+    #about{
+        background-color: #48E5C2;
+        margin-top: -30%;
+    }
+    #menu{
+        background-color: #48E5C2;
+        position: 0;
+        margin-top: -30%;
+    }
+
+    select {
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        appearance: none; /* Remove default arrow in some browsers */
+        background-color: #fff;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    select option {
+        background-color: #fff;
+        color: #333;
+    }
+
+    select:hover {
+        background-color: #070606;
+    }
+    #reservations{
+        background-color: #48E5C2;
+        margin-top: -30%;
+
+    }
+    #contact{
+        background-color: #48E5C2;
+        position: 1;
+    }
+    .list{
+        border-color: #333333;
+    }
+    body footer{
+        margin-top: -10%;
+    }
+}
+body {
+    font-family: serif;
+    max-width: 100%;
+    max-height: fit-content;
+    margin: 0;
+    padding: 0;
+    background-color: #48E5C2;
+}
+header {
+    background-color: #333333;
+    color: white;
+    max-height: fit-content;
+    max-width: 100%;
+    padding: 5px;
+    font-family: 'Times New Roman', Times, serif;
+}
+#home {
+    background-image: url(background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    background-position-y: center;
+}
+#home h1{
+    font-size: 50px;
+    width: 80%;
+    text-align: center;
+    margin-left: 10%;
+    margin-right: 10%;
+    color: #48E5C2;
+    font-weight: 100;
+    -webkit-text-stroke: 1.5px #333333; /* Stroke color and width for WebKit browsers (Safari, Chrome) */
+}
+
+
+header .logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0%;
+}
+
+header .logo h1{
+    display: flex;
+    align-items: center;
+    font-size: 60px;
+}
+
+.intro{
+    font-family: 'Times New Roman', Times, serif;
+    text-align: justify;
+    padding: 30px;
+    opacity: 1;
+
+}
+
+#about{
+    margin-top: -5%;
+}
+
+.intro p{
+    font-size: 30px;
+    text-align: justify;
+    color: black;
+}
+section .intro h1{
+    font-size: 50px;
+    color: black;
+}
+header .logo img {
+    height: auto;
+    width: 80px;
+    border-color: black;
+    border-style: ridge;
+    border-radius: 100%;
+    margin-right: 20px;
+}
+nav ul {
+    list-style-type: none;
+    text-align: right; 
+    padding: 0%;
+}
+
+nav ul li {
+    display: inline-flex;
+    margin-right: 5px;
+    text-decoration: none;
+}
+header .con{
+    height: fit-content;
+    width: 100%;
+    margin-top: 0% ;
+}
+header .con nav ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    text-align: right;
+    cursor: pointer;
+    margin: 100px auto;
+    transition: color 0.3s ease;
+    margin-top: -10%;
+    margin-bottom: -10%;
+}
+
+header .con nav ul li a:hover {
+    color: #48E5C2;
+}
+#menu .category
+  select {
+    width: fit-content;
+    padding: 12px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    border: #333333 solid 2px;
+    border-radius: 5px;
+    background-color: #48E5C2;
+    color: #333333;
+  }
+section {
+    text-align: center;
+    font-size: 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    display: none;
+    background: transparent;
+}
+#menu .category p{
+    font-size: 20px;
+    color: black;
+    font-weight: bold;
+} 
+
+section .menulist{
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-bottom: 30px;
+    max-height: fit-content;
+    max-width: 100%;
+    border-color: #333333;
+    border-width: 3px;
+    border-style: solid;
+    border-radius: 5px;
+    font-size: small;
+    background-color: #FCFAF9;
+    display: block;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.list {
+    flex-basis: 18%;
+    border-radius: 5px;
+    background-color: #48E5C2;
+    border: 1px solid #333333; /* Add border to the list item */
+    padding: 10px; /* Add padding for better visual */
+    box-sizing: border-box; /* Include padding in the total width/height */
+    display: inline-block;
+    text-align: center;
+    max-height: fit-content;
+    margin: 10px;
+  }
+
+  .list img {
+    width: 200px; /* Make the image fill the container */
+    height: 200px;
+    border: 1px solid #080808; /* Add border to the image */
+    border-radius: 3px; /* Optional: Add border-radius for rounded corners */
+  }
+
+  .list h1 {
+    margin-top: 10px; /* Add some spacing between image and heading */
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 15px;
+  }
+  .container {
+    text-align: center;
+  }
+
+  form {
+    background-color: #333;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+    width: 300px;
+    max-width: 100%;
+    display: inline-block; /* Add this to make the form inline */
+  }
+
+  label {
+    display: block;
+    margin-bottom: 15px;
+    color: #fff;
+    font-size: 14px;
+    text-align: left;
+  }
+
+  input,
+  select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 5px;
+    background-color: #444;
+    color: #fff;
+  }
+
+  button {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  button:hover {
+    background-color: #45a049;
+  }
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    bottom: 0;
+    max-width: 100%;
+    position: relative;
+    margin-bottom: -5%;
+    margin-top: -3%;
+}
